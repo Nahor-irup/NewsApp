@@ -1,5 +1,6 @@
 import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
+import 'package:new_app/news_detailspage.dart';
 import 'package:new_app/widget/highlights_widget.dart';
 import 'package:new_app/widget/list_widget.dart';
 
@@ -172,7 +173,9 @@ class NewsHomepage extends StatelessWidget {
               SizedBox(height: 15),
               //Headlines list view
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => NewsDetail(),));
+                },
                 child: ListView.builder(
                   itemBuilder: (context, index) {
                     return NewsList();
